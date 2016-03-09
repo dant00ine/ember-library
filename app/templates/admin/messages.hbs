@@ -1,0 +1,21 @@
+<!--/app/templates/admin/messages.hbs-->
+<h1>Messages from the users</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Message</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |message|}}
+            <tr>
+                <th>{{message.email}}</th>
+                <th>{{#if message.mad}}Angrily: {{/if}}{{message.message}}</th>
+            </tr>
+        {{/each}}
+    </tbody>
+
+</table>
