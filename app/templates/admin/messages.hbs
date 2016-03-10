@@ -6,7 +6,7 @@
         <tr>
             <th>Email</th>
             <th>Message</th>
-
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -14,6 +14,7 @@
             <tr>
                 <th>{{message.email}}</th>
                 <th>{{#if message.mad}}Angrily: {{/if}}{{message.message}}</th>
+                <th><button {{action 'delete' message}}class="btn btn-danger">Delete</button></th>
             </tr>
         {{/each}}
     </tbody>
